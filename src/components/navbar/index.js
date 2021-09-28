@@ -1,6 +1,7 @@
 import React from "react";  
 import './navbar.css';
 import {Link} from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux"
 
 function Navbar(){
@@ -17,14 +18,14 @@ function Navbar(){
 
         { useSelector(state => state.usuarioLogado) > 0 ? 
         <>
-          <li className="nav-item"><Link  className="nav-link active" >Publicar Envento</Link></li>        
-          <li className="nav-item"><Link  className="nav-link active" >Meus Eventos</Link></li>
-          <li className="nav-item"><Link  className="nav-link active" >Atividades</Link></li>
-          <li className="nav-item"><Link  className="nav-link nav-pos active" onClick={() => dispatch({type: 'LOG_OUT'})} >Deslogar</Link></li>
+          <li type="button" className="nav-item"><Link  className="nav-link active" to='/evento-cadastro' >Publicar Envento</Link></li>        
+          <li type="button" className="nav-item"><Link  className="nav-link active" to='/' >Meus Eventos</Link></li>
+          <li type="button" className="nav-item"><Link  className="nav-link active" to='/' >Atividades</Link></li>
+          <li type="button" className="nav-item"><Link  className="nav-link nav-pos active" onClick={() => dispatch({type: 'LOG_OUT'})} >Deslogar</Link></li>
         </> 
         :
         <>
-          <li><Link className="mr-3 mt-1 fa-1x fas fa-home text-white" to ="/login"></Link></li>
+          <li><Link type="button" className="mr-3 mt-1 fa-1x fas fa-home text-white" to ="/"></Link></li>
         </>
 
         }

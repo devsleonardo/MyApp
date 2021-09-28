@@ -26,7 +26,7 @@ function UsuarioRecuperarSenha(){
         <form className="text-center form-login mx-auto mt-5 text-black">
           <h3 clasName="my-5 text-white"> Insira seu email! </h3>
           
-          <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control mt-3 my-2" placeholder="Email"/>
+          <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control mt-3 my-2" placeholder="Email*"/>
           
           <div className="msg my-4 text-center text-black">
             { msg === "sucesso" && <span> Enviamos um link para o seu email para você redefinir a senha! </span>}
