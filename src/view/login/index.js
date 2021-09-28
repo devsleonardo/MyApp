@@ -43,10 +43,8 @@ function Login (){
         <button onClick={Logar} className="w-100 btn btn-lg btn-login my-3" type="button">Login</button>
 
         <div className="msg-login text-white text-center my-2 mx-5">
-
           { msgTipo === "sucesso" && <span className="text-center"> Você esta Conectado! &#129488; </span>}
           { msgTipo === "erro" && <span className="text-center"> Verifique se a senha ou usuário estao corretos! &#128546; </span>}
-         
         </div>
 
         <div className="opcoes-login text-center">
