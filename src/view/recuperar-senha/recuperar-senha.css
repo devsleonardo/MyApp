@@ -2,18 +2,18 @@
   width:100%;
   padding: 15%;
   margin: auto;
-  background-color: #032940; 
+  background-color: #fff; 
   height: 100%;
 }
 
 .bnt-enviar{
-  background-color: #f2a120;
+  background-color: #457fca;
   font-style: unset;
   font-weight: bolder;
   color: #fff;
 }
 
 .bnt-enviar:hover{
-  background-color: #bf6c06;
+  background-color: #5691c8;
   color: #fff;
 }

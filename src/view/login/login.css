@@ -2,30 +2,32 @@
   width:100%;
   padding: 15%;
   margin: auto;
-  background-color: #032940; 
+  background-color: #fff; 
   height: 100%;
 }
+ .form-signin{
+  max-width: 350px;
+ }
 
 .btn-login{
-  background-color: #f2a120;
+  background-color: #457fca;
   font-style: unset;
   font-weight: bolder;
   color: #fff;
 }
 
 .btn-login:hover{
-  background-color: #bf6c06;
+  background-color: #5691c8;
   color: #fff;
 }
 
 .opcoes-login a{
-  text-decoration: none;
   font-weight: bolder;
-  color: #fff;
+  color: 000;
   transition: 1s ease-in;
 }
 
 .opcoes-login a:hover{
   text-decoration: none;
-  color: #bf6c06;
+  color: #000;
 }

@@ -1,26 +1,20 @@
-.form-cadastro{
-  width:100%;
-  padding: 15%;
-  margin: auto;
-  background-color: #032940; 
-  height: 100%;
-}
-
 .form-titulo{
  color: #fff;
 }
 
 .form-login{
-  max-width: 500px;
+  max-width: 350px;
 }
 
 .btn-cadastro{
-  background-color: #f2a120;
+  background-color: #457fca;
+  font-style: unset;
+  font-weight: bolder;
   color: #fff
 }
 
 .btn-cadastro:hover{
-  background-color: #bf6c06;
+  background-color: #5691c8;
   color: #fff
 }
 

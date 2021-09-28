@@ -1,4 +1,12 @@
 .navbar{
-  background: linear-gradient(to right , rgb(101,153,153), rgb(244,121,31));
+  background: linear-gradient(to right, rgb(69, 127, 202), rgb(86, 145, 200));
 }
 
+.nav-link{
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-pos{
+  position: absolute;
+}

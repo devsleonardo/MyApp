@@ -50,19 +50,21 @@ function CreatUsuario(){
 
   return(
     <>
-    <Navbar/>
+  <Navbar/>
     <div className= "form-cadastro">
       <form className = "text-center form-login mx-auto my-2">
-        <h2 className="form-titulo mb-3"> Cadastro de usuários </h2>
+        <h2 className="form-titulo mb-3 text-black"> Cadastro de usuários </h2>
 
-        <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control my-2" placeholder="Email" /> 
-        <input onChange={(e) => setSenha(e.target.value)} type="password" className="form-control my-2" placeholder="Senha" /> 
+        <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control my-2" placeholder="Endereço de Email*" /> 
+        <input onChange={(e) => setSenha(e.target.value)} type="password" className="form-control my-2" placeholder="Senha*" /> 
+
 
         {carregando ? <button class="btn btn-light" type="button" disabled> <span class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>Carregando...</button> :
-        <button onClick={Cadastrar} type="button" className="btn-cadastro btn btn-lg btn-block mt-3 mb-3"> Cadastrar </button>}
+        <button onClick={Cadastrar} type="button" className="w-100 btn-cadastro btn btn-block mt-3 mb-3"> Registrar </button>}
+     
 
 
-        <div className="msg-login text-white text-center my-2 mx-5">
+        <div className="msg-login text-black text-center my-2 mx-5">
           { msgTipo === 'sucesso' && <span className="text-center"> Usuário Cadastrado com sucesso!</span>}
           { msgTipo === 'erro' && <span className="text-center"> {msg} </span>}
         </div>
