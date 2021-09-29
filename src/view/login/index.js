@@ -45,7 +45,7 @@ function Login (){
 
           <div className="msg-login text-black text-center my-2 mx-5">
             { msgTipo === "sucesso" && <span className="text-center"> Você esta Conectado! &#129488; </span>}
-            { msgTipo === "erro" && <span className="text-center"> Verifique se a senha ou usuário estao corretos! &#128546; </span>}
+            { msgTipo === "erro" && <span className="text-center"> Verifique se a senha ou usuário estão corretos! &#128546; </span>}
           </div>
 
         
