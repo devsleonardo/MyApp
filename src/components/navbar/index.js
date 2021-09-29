@@ -20,6 +20,7 @@ function Navbar(){
         <>
           <li type="button" className="nav-item"><Link  className="fa-2x fas fa-home text-white" to='/home' ></Link></li>        
           <li type="button" className="nav-item"><Link  className="ms-2 nav-link active" to='/evento-cadastro' >Publicar Atividade</Link></li>        
+          <li type="button" className="nav-item"><Link  className="ms-2 nav-link active" to='/atividades/meus' >Minhas Atividade</Link></li>        
           <li type="button" className="nav-item"><Link  className="nav-link nav-pos active" onClick={() => dispatch({type: 'LOG_OUT'})} >Deslogar</Link></li>
         </> 
         :

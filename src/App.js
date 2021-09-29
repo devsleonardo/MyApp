@@ -19,6 +19,7 @@ function App() {
         <Route exact path= '/' component ={Login} />
         <Route exact path= '/creatusuario' component ={CreatUsuario} />
         <Route exact path= '/home' component ={Home} />
+        <Route path= '/atividades/:parametro' component ={Home} />
         <Route exact path= '/recuperar-senha' component ={RecuperarSenha} />
         <Route exact path= '/evento-cadastro' component ={EventoCadastro} />
       </Router>

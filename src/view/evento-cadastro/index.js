@@ -14,8 +14,8 @@ function EventoCadastro(props){
     const [titulo, setTitulo] = useState();
     const [tipo, setTipo] = useState();
     const [detalhes, setDetalhes] = useState();
-    const [docAtual, setDocAtual] = useState();    
-    const [docNova, setDocNova] = useState();    
+    const [documentoAtual, setDocumentoAtual] = useState();    
+    const [documentoNova, setDocumentoNova] = useState();    
     const usuarioEmail = useSelector(state => state.usuarioEmail);
 
 
@@ -28,7 +28,7 @@ function EventoCadastro(props){
                 setTitulo(resultado.data().titulo)       
                 setTipo(resultado.data().tipo)  
                 setDetalhes(resultado.data().detalhes)                                         
-                setDocAtual(resultado.data().doc)                                                                                                  
+                setDocumentoNova(resultado.data().doc)                                                                                                  
     })
 }
 },[carregando])
@@ -37,14 +37,14 @@ function atualizar(){
     setMsgTipo(null);
     setCarregando(1);
 
-    if(docNova)    
-    storage.ref(`ati/${docNova.name}`).put(docNova);
+    if(documentoNova)    
+    storage.ref(`documentos/${documentoNova.name}`).put(documentoNova);
     
-        db.collection('even').doc(props.match.params.id).update({
+        db.collection('eventos').doc(props.match.params.id).update({
             titulo: titulo,
             tipo: tipo,
             detalhes: detalhes,
-            doc: docNova ? docNova.name : docAtual            
+            doc: documentoNova ? documentoNova.name : documentoAtual            
         }).then(() => {
             setMsgTipo('sucesso');
             setCarregando(0);
@@ -58,13 +58,13 @@ function atualizar(){
         setMsgTipo(null);
         setCarregando(1);
         
-        storage.ref(`ati/${docNova.name}`).put(docNova).then(() => {
-            db.collection('even').add({
+        storage.ref(`documentos/${documentoNova.name}`).put(documentoNova).then(() => {
+            db.collection('eventos').add({
                 titulo: titulo,
                 tipo: tipo,
                 detalhes: detalhes,
                 usuario: usuarioEmail, 
-                doc: docNova.name,
+                documento: documentoNova.name,
                 publico: 1,
                 criacao: new Date()
             }).then(() => {
@@ -109,8 +109,8 @@ function atualizar(){
                 </div>
 
                 <div className="form-group my-3">
-                    <label>Upload do Doc {props.match.params.id  ? '(caso queira manter o mesmo DOC, não precisa escolher uma nova imagem!)' : null}:</label>
-                    <input onChange={(e) => setDocNova(e.target.files[0]) } type="file" className="form-control"/>
+                    <label>Upload do Documento {props.match.params.id  ? '(caso queira manter o mesmo documento, não precisa escolher uma nova imagem!)' : null}:</label>
+                    <input onChange={(e) => setDocumentoNova(e.target.files[0]) } type="file" className="form-control"/>
                 </div>
 
                 <div className="text-center">               
